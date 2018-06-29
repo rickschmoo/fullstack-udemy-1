@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "description": "Companion repo to a course on Udemy.com. See here: https://www.udemy.com/node-with-react-fullstack-web-development",
   "main": "index.js",
+  "engines": {
+    "node": "10.1.0",
+    "npm": "6.1.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
