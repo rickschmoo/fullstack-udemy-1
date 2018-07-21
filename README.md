@@ -10,5 +10,9 @@ Companion repo to a course on Udemy.com. See here: https://www.udemy.com/node-wi
 6. Tabulate feedback
 7. Provide report
 
-Rick's notes:
+Infrastructure
+* github
+* mlab mongodb https://mlab.com/databases/rickschmoo-emaily-prod#users
+* google API https://console.developers.google.com/
+* heroku
 https://damp-mountain-34745.herokuapp.com/ | https://git.heroku.com/damp-mountain-34745.git
