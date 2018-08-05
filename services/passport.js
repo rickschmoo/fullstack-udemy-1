@@ -28,27 +28,26 @@ passport.use(new GoogleStrategy({
 	clientSecret: keys.googleClientSecret,
 	callbackURL: '/auth/google/callback',
 	proxy: true
-	}, (accessToken, refreshToken, profile, done) => {
+	}, 
+	async (accessToken, refreshToken, profile, done) => {
 		
 		// console.log('access token: ', accessToken);
 		// console.log('refresh token: ', refreshToken);
 		// console.log('profile : ', profile);
 		
-		User.findOne({
+		const existingUser = await User.findOne({
 			googleID: profile.id
-		}).then((existingUser) => {
-			if (existingUser) {
-				// user already exists
-				done(null, existingUser);
-			} else {
-				// need to create new user
-				new User({
-					googleID: profile.id
-				}).save()
-				.then(user => done(null, user));
-			}
 		});
-
+		if (existingUser) {
+			// user already exists
+			done(null, existingUser);
+		} else {
+			// need to create new user
+			const user = await new User({
+				googleID: profile.id
+			}).save();
+			done(null,user);
+		}
 
 	}
 ));
