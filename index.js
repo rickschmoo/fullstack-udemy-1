@@ -29,6 +29,7 @@ app.use(passport.session());
 // instead of authRoutes(app);
 require('./routes/authRoutes')(app);
 require('./routes/billingRoutes')(app);
+require('./routes/surveyRoutes')(app);
 
 // production config
 if (process.env.NODE_ENV === 'production') {
