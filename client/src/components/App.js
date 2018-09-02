@@ -20,7 +20,7 @@ class App extends Component {
 			<div className="container">
 				Top-level div
 				<BrowserRouter>
-					<div>
+					<div className="container">
 						<Header />
 						<Route exact path="/" component={Landing}/>
 						<Route exact path="/surveys" component={Dashboard}/>
