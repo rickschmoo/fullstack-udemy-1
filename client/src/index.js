@@ -9,9 +9,9 @@ import reduxThunk from 'redux-thunk';
 import App from './components/App';
 import reducers from './reducers';
 
-// test mailer
-// import axios from 'axios';
-// window.axios = axios;
+// dev only: hook for testing mailer
+import axios from 'axios';
+window.axios = axios;
 
 const store = createStore(
 	reducers,
