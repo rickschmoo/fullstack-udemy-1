@@ -1,0 +1,3 @@
+.rick-accessible-focus-outline:focus {
+  outline: 100px dashed green;
+}
